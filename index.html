@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ioannis Miltiadous - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        /* Sidebar Styles */
+        nav {
+            width: 260px;
+            background: #1e1e1e;
+            padding: 40px 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        nav h1 {
+            font-size: 1.8rem;
+            margin: 0 0 10px;
+            color: #64b5f6;
+        }
+        nav p {
+            font-size: 1rem;
+            margin: 0 0 20px;
+            color: #f0f0f0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin-bottom: 15px;
+        }
+        nav ul li a {
+            color: #64b5f6;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background: #1565c0;
+            color: white;
+        }
+
+        /* Main Content Styles */
+        main {
+            margin-left: 300px;
+            padding: 40px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            color: #64b5f6;
+        }
+        .card {
+            
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        section .card p {
+            margin-bottom: 30px;
+
+        }
+
+        /* Vertical Line Styling for Lists */
+        ul.vertical-line {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        ul.vertical-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px; /* Adjusted to center the line */
+            width: 2px;
+            height: 100%;
+            background: #64b5f6;
+        }
+        ul.vertical-line li {
+            position: relative;
+            padding-left: 40px; /* Adjusted to align text with the line */
+            margin-bottom: 40px; /* Increased spacing between list items */
+        }
+        ul.vertical-line li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15px; /* Matches the line's position */
+            width: 10px;
+            height: 10px;
+            background: #64b5f6;
+            border-radius: 50%;
+            transform: translateY(5px);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #1e1e1e;
+            color: #f0f0f0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #64b5f6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+                box-shadow: none;
+            }
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px;
+            }
+            nav ul li a {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Ioannis Miltiadous</h1>
+        <p>Software Developer at heart with a passion for football analysis</p>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#education">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="section active">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Hello and welcome. My name is Ioannis Miltiadous, I am a 30-year-old software developer from Cyprus with a passion for data and football.</p>
+                <p>I hold a Bsc in Applied Informatics and I am working towards an MSc in Data Analytics in Football. Football has always been a passion of mine and being able to blend the two things I love, software development and football together is a dream coming true.</p>
+                <p>In my website you'll find a collection of my work, small projects and samples that showcase my skills and abilities in software development and football analysis and visualization. </p>
+                <p>I believe that my unique combination of skills in computer science, software development, computer systems and Performance analysis along with my passion for football and knowledge makes me a valuable asset.</p>
+                <p>Thank you for taking the time to learn more about me and my work. I look forward to the opportunity to discuss how I can help you achieve success</p>
+            </div>
+        </section>
+        <section id="resume" class="section">
+            <h2>Resume</h2>
+            <div class="card" style="display: flex; justify-content: space-between;">
+            <ul class="vertical-line" style="flex: 1; margin-right: 20px;">
+                <li>
+                <strong>Software Development Engineer in Test - Amdocs (2021 - Present)</strong>
+                <p>Developing automation solutions using Java.</p>
+                <p>Experience with Jenkins, Git, relational Databases, and Grafana.</p>
+                </li>
+                <li>
+                <strong>Cloud Engineer Intern - Deloitte Greece (December 2019)</strong>
+                <p>Completed a comprehensive two-week training program covering the three leading cloud platforms.</p>
+                <p>Successfully led a collaborative team project to deploy on AWS.</p>
+                </li>
+                <li><strong>University of Macedonia (2019)</strong> - BSc, Applied Informatics</li>
+                <li><strong>Nacsport (June 2024)</strong> - Soccer Video Analysis with Nacsport</li>
+                <li><strong>Once Sport (April 2024)</strong> - Video Analyst</li>
+                <li><strong>Professional Football Scouts Association (PFSA)</strong> - Opposition Analysis in Football Level 1 & 2 (June 2024)</li>
+                <li><strong>Amazon Web Services (AWS) (January 2023)</strong> - AWS Certified</li>
+            </ul>
+            <div style="flex: 0.5; padding-left: 20px; border-left: 2px solid #64b5f6;">
+                <h3 style="color: #64b5f6;">Languages</h3>
+                <ul style="list-style: none; padding: 0;">
+                <li>English</li>
+                <li>Greek</li>
+                </ul>
+
+                <h3 style="color: #64b5f6;">Programming Languages</h3>
+                <ul style="list-style: none; padding: 0;">
+                <li>Python</li>
+                <li>SQL</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="card">
+            <ul class="vertical-line">
+                <li>
+                <a href="https://www.linkedin.com/in/ioannismiltiadous" target="_blank" style="color: #64b5f6; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                    
+                </a>
+                </li>
+                <li>
+                <a href="mailto:miltiadouy@gmail.com" style="color: #64b5f6; text-decoration: none;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                    
+                </a>
+                </li>
+            </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
