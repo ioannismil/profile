@@ -1,243 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ioannis Miltiadous - Portfolio</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            height: 100vh;
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-
-        /* Sidebar Styles */
-        nav {
-            width: 260px;
-            background: #1e1e1e;
-            padding: 40px 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-        }
-        nav h1 {
-            font-size: 1.8rem;
-            margin: 0 0 10px;
-            color: #64b5f6;
-        }
-        nav p {
-            font-size: 1rem;
-            margin: 0 0 20px;
-            color: #f0f0f0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            margin-bottom: 15px;
-        }
-        nav ul li a {
-            color: #64b5f6;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        nav ul li a:hover {
-            background: #1565c0;
-            color: white;
-        }
-
-        /* Main Content Styles */
-        main {
-            margin-left: 300px;
-            padding: 40px;
-            flex: 1;
-            overflow-y: auto;
-        }
-        main h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            margin-left: 10px;
-            color: #64b5f6;
-        }
-        .card {
-            
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        section .card p {
-            margin-bottom: 30px;
-
-        }
-
-        /* Vertical Line Styling for Lists */
-        ul.vertical-line {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            position: relative;
-        }
-        ul.vertical-line::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 18px; /* Adjusted to center the line */
-            width: 2px;
-            height: 100%;
-            background: #64b5f6;
-        }
-        ul.vertical-line li {
-            position: relative;
-            padding-left: 40px; /* Adjusted to align text with the line */
-            margin-bottom: 40px; /* Increased spacing between list items */
-        }
-        ul.vertical-line li::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 15px; /* Matches the line's position */
-            width: 10px;
-            height: 10px;
-            background: #64b5f6;
-            border-radius: 50%;
-            transform: translateY(5px);
-        }
-
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #1e1e1e;
-            color: #f0f0f0;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #64b5f6;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                width: 100%;
-                height: auto;
-                position: relative;
-                box-shadow: none;
-            }
-            main {
-                margin-left: 0;
-                padding: 20px;
-            }
-            nav ul {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav ul li {
-                margin: 5px;
-            }
-            nav ul li a {
-                padding: 8px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ioannis Miltiadou | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <nav>
-        <h1>Ioannis Miltiadous</h1>
-        <p>Software Developer at heart with a passion for football analysis</p>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#education">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <div id="app">
+    <nav class="menu-bar" role="navigation" aria-label="Primary Navigation">
+      <a href="#home" class="menu-link active" tabindex="0"><i class="fas fa-home"></i>Home</a>
+      <a href="#about" class="menu-link" tabindex="0"><i class="fas fa-user"></i>About Me</a>
+      <a href="#resume" class="menu-link" tabindex="0"><i class="fas fa-graduation-cap"></i>Resume</a>
+      <a href="#portfolio" class="menu-link" tabindex="0"><i class="fas fa-briefcase"></i>Portfolio</a>
     </nav>
+    <aside class="profile-sidebar" role="complementary">
+      <div class="profile">
+        <img src="profile.png" alt="Profile picture of Ioannis Miltiadou" class="profile-pic" />
+        <div>
+          <div class="profile-name">Ioannis<br>Miltiadou</div>
+          <div class="profile-title">Automation Engineer | Football Data Analyst</div>
+        </div>
+        <div class="social-icons" aria-label="Social media links">
+          <a href="https://linkedin.com/in/ioannismiltiadous" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/ioannis_mtd" target="_blank" aria-label="X (Twitter)"><i
+              class="fab fa-x-twitter"></i></a>
+          <a href="mailto:miltiadouy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <a href="cv.pdf" class="download-btn" style="text-decoration: none;" download>Download CV</a>
+      </div>
+    </aside>
+    <div id="main-content-top"></div>
+    <main class="main-content" role="main">
+      <section id="home" class="page-section active" tabindex="0">
+        <h1>Ioannis Miltiadou</h1>
+        <p>QA Automation Engineer &amp; Football Data Analyst</p>
+      </section>
+      <section id="about" class="page-section" tabindex="0">
+        <h1>About Me</h1>
+        <p>I'm Ioannis Miltiadou, a QA Automation Engineer based in Pafos, Cyprus, with over 4 years of professional
+          experience building robust test automation solutions. I hold a BSc in Applied Informatics and Computer Science
+          from the University of Macedonia, where I developed a strong foundation in software development and
+          problem-solving.</p>
 
-    <main>
-        <section id="about" class="section active">
-            <h2>About Me</h2>
-            <div class="card">
-                <p>Hello and welcome. My name is Ioannis Miltiadous, I am a 30-year-old software developer from Cyprus with a passion for data and football.</p>
-                <p>I hold a Bsc in Applied Informatics and I am working towards an MSc in Data Analytics in Football. Football has always been a passion of mine and being able to blend the two things I love, software development and football together is a dream coming true.</p>
-                <p>In my website you'll find a collection of my work, small projects and samples that showcase my skills and abilities in software development and football analysis and visualization. </p>
-                <p>I believe that my unique combination of skills in computer science, software development, computer systems and Performance analysis along with my passion for football and knowledge makes me a valuable asset.</p>
-                <p>Thank you for taking the time to learn more about me and my work. I look forward to the opportunity to discuss how I can help you achieve success</p>
+        <p>My professional journey began with a Cloud Engineering internship at Deloitte Greece,
+          Since joining Amdocs in 2021, I've progressed from Junior Test Engineer to Software
+          Development Engineer in Test, where I specialized in developing automation solutions using Java, working with
+          Jenkins and Git, and building data visualization dashboards with Grafana. Currently, I'm a QA Automation
+          Engineer at Woodlaine Digital Solutions, continuing to design scalable automation frameworks and integrate
+          CI/CD pipelines.</p>
+
+        <p>Beyond my technical work, I'm deeply passionate about football analytics. I'm currently pursuing an MSc in
+          Data Analytics in Football at Sports Data Campus, combining my software engineering expertise with tactical
+          analysis. I've earned multiple certifications in performance analysis, data analytics, video analysis, and
+          talent identification from organizations like INSA, PFSA, and AFCAS. My goal is to bridge the gap between
+          technical problem-solving and tactical insights, creating data-driven visualizations and tools that make
+          football analysis actionable and accessible.</p>
+
+        <p>I'm fluent in Greek and English, with beginner-level Spanish. When I'm not coding or analyzing football data,
+          I enjoy working on personal projects that range from D&D tools to utility applications, always looking for
+          creative ways to solve problems through technology.</p>
+      </section>
+      <section id="resume" class="page-section" tabindex="0">
+        <h1>Resume</h1>
+
+        <div class="resume-container">
+          <!-- Left Column: Education & Experience -->
+          <div class="resume-main-column">
+            <!-- Education Section -->
+            <div style="margin-bottom: 3rem;">
+              <h2 style="margin-bottom: 1.2rem;">Education</h2>
+              <div class="resume-card" style="margin-bottom: 1.2rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">Sports Data Campus</strong>
+                  <span style="color: #c7c8c9; font-size: 0.9em; white-space: nowrap; margin-left: 1rem;">Oct 2025
+                    - Sep 2026</span>
+                </div>
+                <div style="color: var(--color-text); font-size: 1rem;">MSc Data Analytics in Football</div>
+              </div>
+              <div class="resume-card">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">University of Macedonia</strong>
+                  <span style="color: #c7c8c9; font-size: 0.9em; white-space: nowrap; margin-left: 1rem;">2015 -
+                    2019</span>
+                </div>
+                <div style="color: var(--color-text); font-size: 1rem;">BSc Applied Informatics, Computer Science
+                </div>
+              </div>
             </div>
-        </section>
-        <section id="resume" class="section">
-            <h2>Resume</h2>
-            <div class="card" style="display: flex; justify-content: space-between;">
-            <ul class="vertical-line" style="flex: 1; margin-right: 20px;">
-                <li>
-                <strong>Software Development Engineer in Test - Amdocs (2021 - Present)</strong>
-                <p>Developing automation solutions using Java.</p>
-                <p>Experience with Jenkins, Git, relational Databases, and Grafana.</p>
-                </li>
-                <li>
-                <strong>Cloud Engineer Intern - Deloitte Greece (December 2019)</strong>
-                <p>Completed a comprehensive two-week training program covering the three leading cloud platforms.</p>
-                <p>Successfully led a collaborative team project to deploy on AWS.</p>
-                </li>
-                <li><strong>University of Macedonia (2019)</strong> - BSc, Applied Informatics</li>
-                <li><strong>Nacsport (June 2024)</strong> - Soccer Video Analysis with Nacsport</li>
-                <li><strong>Once Sport (April 2024)</strong> - Video Analyst</li>
-                <li><strong>Professional Football Scouts Association (PFSA)</strong> - Opposition Analysis in Football Level 1 & 2 (June 2024)</li>
-                <li><strong>Amazon Web Services (AWS) (January 2023)</strong> - AWS Certified</li>
-            </ul>
-            <div style="flex: 0.5; padding-left: 20px; border-left: 2px solid #64b5f6;">
-                <h3 style="color: #64b5f6;">Languages</h3>
-                <ul style="list-style: none; padding: 0;">
-                <li>English</li>
-                <li>Greek</li>
+
+            <!-- Experience Section -->
+            <div style="margin-bottom: 2rem;">
+              <h2 style="margin-bottom: 1.2rem;">Experience</h2>
+
+              <div class="resume-card" style="margin-bottom: 1.2rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">QA Automation Engineer</strong>
+                  <span style="color: #c7c8c9; font-size: 0.85em; white-space: nowrap; margin-left: 1rem;">Jul
+                    2025 - Present</span>
+                </div>
+                <div style="color: var(--color-text-muted); margin-bottom: 0.3rem;">Woodlaine Digital Solutions ·
+                  Full-time</div>
+                <div style="color: #999; font-size: 0.9em;">Limassol, Cyprus (Hybrid)</div>
+              </div>
+
+              <div class="resume-card" style="margin-bottom: 1.2rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">Software Development Engineer in
+                    Test</strong>
+                  <span style="color: #c7c8c9; font-size: 0.85em; white-space: nowrap; margin-left: 1rem;">Jan
+                    2023 - Jul 2025</span>
+                </div>
+                <div style="color: var(--color-text-muted); margin-bottom: 0.3rem;">Amdocs · Full-time</div>
+                <div style="color: #999; font-size: 0.9em; margin-bottom: 1rem;">Limassol, Cyprus (Hybrid) · 2 yrs 7
+                  mos</div>
+                <ul
+                  style="margin: 0; padding-left: 1.5rem; color: var(--color-text-muted); font-size: 0.95em; line-height: 1.6;">
+                  <li>Developing automation solutions using Java</li>
+                  <li>Working with Jenkins, Git, and relational databases</li>
+                  <li>Developed and maintaining scripts using Grafana for data visualization</li>
+                  <li>Built a web platform to run test cases on demand</li>
                 </ul>
+              </div>
 
-                <h3 style="color: #64b5f6;">Programming Languages</h3>
-                <ul style="list-style: none; padding: 0;">
-                <li>Python</li>
-                <li>SQL</li>
-                </ul>
-            </div>
-            </div>
-        </section>
+              <div class="resume-card" style="margin-bottom: 1.2rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">Junior Test Engineer</strong>
+                  <span style="color: #c7c8c9; font-size: 0.85em; white-space: nowrap; margin-left: 1rem;">Jun
+                    2021 - Jan 2023</span>
+                </div>
+                <div style="color: var(--color-text-muted); margin-bottom: 0.3rem;">Amdocs · Full-time</div>
+                <div style="color: #999; font-size: 0.9em;">Limassol, Cyprus · 1 yr 8 mos</div>
+              </div>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="card">
-            <ul class="vertical-line">
-                <li>
-                <a href="https://www.linkedin.com/in/ioannismiltiadous" target="_blank" style="color: #64b5f6; text-decoration: none;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; vertical-align: middle; margin-right: 8px;">
-                    
-                </a>
-                </li>
-                <li>
-                <a href="mailto:miltiadouy@gmail.com" style="color: #64b5f6; text-decoration: none;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 20px; vertical-align: middle; margin-right: 8px;">
-                    
-                </a>
-                </li>
-            </ul>
+              <div class="resume-card" style="margin-bottom: 1.2rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                  <strong style="font-size: 1.1rem; color: var(--color-accent);">Cloud Engineer Intern</strong>
+                  <span style="color: #c7c8c9; font-size: 0.85em; white-space: nowrap; margin-left: 1rem;">Dec
+                    2019</span>
+                </div>
+                <div style="color: var(--color-text-muted); margin-bottom: 0.3rem;">Deloitte Greece</div>
+                <div style="color: #999; font-size: 0.9em;">Thessaloniki, Greece · 1 mo</div>
+              </div>
             </div>
-        </section>
+          </div>
+
+          <!-- Right Column: Languages & Certifications -->
+          <div class="resume-side-column">
+            <!-- Languages Section -->
+            <div style="margin-bottom: 2.5rem;">
+              <h2 style="margin-bottom: 1.2rem;">Languages</h2>
+              <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                  <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.05rem;">Greek</div>
+                  <div class="lang-bar">
+                    <div class="fill full"></div>
+                  </div>
+                  <div style="font-size: 0.9em; color: #ccc; margin-top: 0.5rem;">Native speaker</div>
+                </div>
+                <div>
+                  <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.05rem;">English</div>
+                  <div class="lang-bar">
+                    <div class="fill full"></div>
+                  </div>
+                  <div style="font-size: 0.9em; color: #ccc; margin-top: 0.5rem;">Fluent</div>
+                </div>
+                <div>
+                  <div style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.05rem;">Spanish</div>
+                  <div class="lang-bar">
+                    <div class="fill beginner"></div>
+                  </div>
+                  <div style="font-size: 0.9em; color: #ccc; margin-top: 0.5rem;">Beginner</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications Section -->
+            <div>
+              <h2 style="margin-bottom: 1.2rem;">Certifications</h2>
+
+              <h3 style="font-size: 1rem; color: var(--color-secondary); margin-bottom: 0.8rem; margin-top: 1.5rem;">
+                Football Analytics</h3>
+              <div class="certifications-list">
+                <div>Performance Analyst (INSA)</div>
+                <div>Positional and Relational Football through Data</div>
+                <div>Tableau and Football: A Beginner's Guide</div>
+                <div>Soccer Video Analysis with Nacsport</div>
+                <div>AFCAS Professional Football Scouting Level 1</div>
+                <div>Introduction to Space in Football Tactics</div>
+                <div>Statistical Modelling in Football</div>
+                <div>Video Analyst Certificate (Once Sport)</div>
+                <div>Data Analysis in Football Level 1 (PFSA)</div>
+                <div>Performance Analysis in Football Level 1 & 2 (PFSA)</div>
+                <div>Talent Identification in Football Level 1 (PFSA)</div>
+              </div>
+
+              <h3 style="font-size: 1rem; color: var(--color-secondary); margin-bottom: 0.8rem; margin-top: 1.5rem;">
+                Technology & Other</h3>
+              <div class="certifications-list">
+                <div>DevOps Foundation Certified Professional</div>
+                <div>AWS Certified Cloud Practitioner</div>
+                <div>UAS Remote Pilot A1/A3 Certificate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="page-section" tabindex="0">
+        <h1>Portfolio</h1>
+        <p>Check out some of my personal projects and tools I've built.</p>
+        <div class="portfolio-grid">
+          <div class="project-card">
+            <h3>DnD5e Magic Item Card Creator</h3>
+            <p>Create custom magic item cards for Dungeons & Dragons 5th edition campaigns with an easy-to-use
+              interface.</p>
+            <div>
+              <span class="project-tech">JavaScript</span>
+              <span class="project-tech">HTML/CSS</span>
+            </div>
+            <a href="https://github.com/ioannismil/dnd5eMagicItemCardCreator" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>MTG Trivia</h3>
+            <p>Test your Magic: The Gathering knowledge with four unique trivia games! Guess mana costs, compare card
+              values, identify artwork, and test your knowledge of card prices.</p>
+            <div>
+              <span class="project-tech">Python</span>
+              <span class="project-tech">Flask</span>
+              <span class="project-tech">PostgreSQL</span>
+            </div>
+            <a href="https://mtgtrivia.xyz" target="_blank" class="project-link">
+              Visit Site <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>That But Budget</h3>
+            <p>Budget-friendly alternatives and recommendations platform. Find affordable options for products and
+              services you love.</p>
+            <div>
+              <span class="project-tech">Web App</span>
+            </div>
+            <a href="https://thatbutbudget.com" target="_blank" class="project-link">
+              Visit Site <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Football Scouting Profile Generator</h3>
+            <p>Generate professional football scouting reports with customizable player profiles, strengths, weaknesses,
+              and potential assessments for talent identification.</p>
+            <div>
+              <span class="project-tech">JavaScript</span>
+              <span class="project-tech">HTML/CSS</span>
+            </div>
+            <a href="https://ioannismil.github.io/scoutingprofilegen/" target="_blank" class="project-link">
+              Visit Site <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>CSV to VCF Converter</h3>
+            <p>Python-based converter that transforms CSV contact files into VCF (vCard) format for easy import into
+              contact management systems.</p>
+            <div>
+              <span class="project-tech">Python</span>
+            </div>
+            <a href="https://github.com/ioannismil/csvtovcf" target="_blank" class="project-link">
+              View on GitHub <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
